@@ -1,0 +1,375 @@
+<html>
+    <head>
+    <title>TRAVELOGUE</title>
+    
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Travel Slideshow</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bilbo Swash Caps">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Style Script">
+    
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+        .carousel-item {
+          height: 800px; 
+        }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    
+    
+    height:4000px;
+    
+    }
+       
+    
+    
+    nav {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      height: 90px;
+      background-color: #262126;
+      box-shadow: 3px 3px 10px lightslategray;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .logo {
+      flex: 1;
+      font-size: 40px;
+      padding: 20px;
+      margin-left: 50px;
+      font-family: Satisfy;
+     align-items:flex-start;
+    color:#ff5703;
+    }
+    ul{
+      flex: 1;
+      display: flex;
+      flex-direction:row;
+     justify-content:space-between;
+    align-items:flex-end;
+    }
+    li{
+    list-style:none;
+    font-family: "Barlow Condensed";
+    
+      text-align: center;
+    }
+    li a{
+    text-decoration:none;
+    color:#ff5703;;
+    display: flex;
+     padding:30px;
+    font-weight:bold;
+    font-size:18px;
+    }
+    nav ul li a:hover {
+      color: yellow;
+      text-decoration: underline;
+    }
+    
+    .body1{
+    background-image:url("https://images.pexels.com/photos/1483054/pexels-photo-1483054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      /*overflow: hidden;*/
+      width: 100%;
+      height:100vh;
+      text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    .body1{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .body-heading{
+    font-family:satisfy;
+    font-size:70px;
+    font-weight: normal;
+    color:#fcf00a;
+    padding-bottom:180px;
+    
+    }
+    
+    .body-heading {
+          text-align: center;
+        }
+    
+        h1 {
+          color:#FFE033 ;
+          transition: color 0.3s ease-out;
+        }
+    
+        h1:hover {
+          color:#C70039;
+    transform:scale(1.2);
+    }
+    .form{
+    width:90%;
+     background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    align-items:center;
+    padding: 1% 2%;
+    }
+    .input-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    }
+    #input-box{
+    padding:10px;
+    border-radius:5px;
+    width:60%;
+    border:1px solid black;
+    margin:3px;
+    transition:  0.3s ease-out;
+    }
+    #input-box:hover{
+    transform:scale(1.2);
+    }
+    #input-date{
+    padding:10px;
+    border-radius:5px;
+    width:30%;
+    margin:3px;
+    transition:  0.3s ease-out;
+    }
+    #input-date:hover{
+    transform:scale(1.2);
+    }
+    
+    
+    
+    
+    
+    .btn{
+    padding:10px;
+    width:20%;
+    border-radius:5px;
+   
+    margin:3px;
+    font-weight:bold;
+    transition:  0.3s ease-out;
+    background-color:red;
+    color:white;
+    }
+    .btn:hover{
+    transform:scale(1.2);
+    }
+    .services {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+     
+    width:100%;
+    margin-top:800px;
+    
+    }
+    .service-item {
+      flex: 1;
+      padding: 50px 10px;
+      border: lightcyan solid 1px;
+      text-align: center;
+      margin: 180px 50px;
+      transition: all 1s;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    
+    
+    }
+    .service-item:hover {
+      box-shadow: 3px 3px 20px blue;
+    transform:translatey(-50px);
+    }
+    
+    .service-item h2 {
+      font-family: Barlow Condensed;
+      font-size: 18px;
+      width: 120px;
+      color: #001f38;
+      flex: 1;
+    }
+    .service-item img {
+      width: 60px;
+      height: 60px;
+      flex: 1;
+    }
+    .body3{
+    
+    width:100%;
+   
+    color:green;
+    align-item:center;
+    
+    }
+    .places-text {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .places-text small {
+      font-family: times roman;
+      color: black;
+      font-size: 55px;
+     
+    letter-spacing: 1px;
+    }
+    .places-text h2 {
+      font-family: "Bilbo Swash Caps", sans-serif;
+      font-size: 55px;
+      color: #191d34;
+      letter-spacing: 1px;
+    }
+    .
+    
+    
+    </style>
+    </head>
+    <body>
+       <section class="header">
+         <nav>
+             <div class="logo">go trip</div>
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">TOURS</a></LI>
+                 <li><a href="#">PACKAGE</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+              </UL>
+         </nav>
+    </section>
+    
+      <section class="body1">
+                <div class="body-text-item">
+                    <div class="body-heading">
+                        <h1 class="display-1">Find your Next tour!</h1>
+                    </div>
+                   <form class="form">
+      <div class="input-container">
+        <input type="text" id="input-box" placeholder="What is your preferred location" />
+        <input type="date" id="input-date"/>
+        <button class="btn">BOOK</button>
+      </div>
+    </form>
+    </div>
+     </section>
+    
+    <section class="body2">
+    <div class="services">
+       <div class="service-item">
+            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/tour-guide_onzla9.png">
+              <h2>10000+ Our Local Guides</h2></div>
+          <div class="service-item">
+            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293635/experience_a3fduk.png">
+                    <h2>30+ Years of Travel Experience</h2></div>
+              <div class="service-item">
+       <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/feedback_s8z7d9.png">
+                    <h2>99% Our Travelers are Happy</h2></div>
+       <div class="service-item">
+       <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293738/reliability_jbpn4g.png">
+                    <h2>100% Trusted Tour Agency</h2></div>
+    </div>
+    </section>
+    <section class="body3">
+         <div class="text-center"><h2 class="text-center" >Stress-Free Holidays with go trip</h2>
+      </div>    <div id="myCarousel" class="carousel slide h-800px" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+         <li data-target="#myCarousel" data-slide-to="3"></li>
+     <li data-target="#myCarousel" data-slide-to="4"></li>
+     <li data-target="#myCarousel" data-slide-to="5"></li>
+     <li data-target="#myCarousel" data-slide-to="6"></li>
+     <li data-target="#myCarousel" data-slide-to="7"></li>
+      </ul>
+    
+      <!-- Slides -->
+    <center>  <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="newyork.jpg" alt="Image 1" class="d-block"  >
+          
+        </div>
+        <div class="carousel-item">
+          <img src="tajmahal.jpg" alt="Image 2" class="d-block" >
+         
+        </div>
+        <div class="carousel-item">
+          <img src="maldives.jpg" class="d-block" >
+          
+        </div>
+    <div class="carousel-item">
+          <img src="bali.jpg" class="d-block" >
+          
+        </div>
+    <div class="carousel-item">
+          <img src="ocean.jpg" class="d-block" >
+          
+        </div>
+    <div class="carousel-item">
+          <img src="dubai.jpg" class="d-block" >
+          
+        </div>
+    <div class="carousel-item">
+          <img src="goldentemple.jpg" class="d-block" >
+         
+        </div>
+    <div class="carousel-item">
+          <img src="jodhpur.jpg" class="d-block" >
+         
+        </div> </center>
+      </div>
+    
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div></center>
+    </section>
+    
+       <section class="places">
+                <div class="places-text">
+                    <small>FEATURED TOURS PACKAGES</small>
+                    <h2>Favourite Places</h2>
+                </div>
+              
+    </section>
+    </body>
+    </html>
